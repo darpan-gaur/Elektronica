@@ -1,5 +1,5 @@
 from stockfish import Stockfish
-class board:
+class board():
     def __init__(self):
         self.Board = Stockfish()
 
@@ -14,7 +14,7 @@ class board:
         """
         self.Board.make_moves_from_current_position([move])
 
-    def get_best(display = True):
+    def get_best(self, display = True):
         best_move = self.Board.get_best_move()
         self.Board.make_moves_from_current_position([best_move])
         if (display):
