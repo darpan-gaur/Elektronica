@@ -41,6 +41,13 @@ def get_best_move_from_board():
         best_move = brd.get_best()
     return best_move
 
+def print_array(arr):
+    for i in range(8):
+        for j in range(8):
+            print(arr[i][j], end=' ')
+        print()
+    print()
+
 while (True):
     # Take input from user
     arr = []
@@ -49,8 +56,10 @@ while (True):
         temp = s.split(' ')
         arr.append(temp)
     # arr.reverse()
-    player_move = move_from_player(prev, arr)
-
+    # print_array(prev)
+    # print_array(arr)
+    player_move = move_from_player(arr,prev)
+    # print(player_move)
     # print(move)
     # Implement detected move in stockfish board
     brd.move_piece(player_move, display=False)

@@ -2,8 +2,8 @@ import cv2
 import joblib
 m = ['a','b','c','d','e','f','g','h']
 
-PATH_TO_MODEL = 'model.pkl'
-model = joblib.load(PATH_TO_MODEL)
+# PATH_TO_MODEL = 'model.pkl'
+# model = joblib.load(PATH_TO_MODEL)
 
 def crop_img(path_to_image):
     img = cv2.imread(path_to_image)

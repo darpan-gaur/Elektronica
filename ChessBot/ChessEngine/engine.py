@@ -1,4 +1,5 @@
 from stockfish import Stockfish
+
 class board():
     def __init__(self, display = True):
         self.Board = Stockfish()
