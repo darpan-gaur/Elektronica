@@ -51,7 +51,7 @@ def get_array(path_to_photo):
             imgs[i][j] = imgs[i][j].resize((224, 224))
             imgs[i][j] = tf.keras.applications.mobilenet.preprocess_input(np.array(imgs[i][j], dtype=np.float32))
             imgs[i][j] = np.expand_dims(imgs[i][j], axis=0)
-    arr = [[li[model.predict(imgs[i][j])] for j in range(8)] for i in range(8)]
+    arr = [[li[int(model.predict(imgs[i][j]))] for j in range(8)] for i in range(8)]
     # for i in range(8):
     #     temp = []
     #     for j in range(8):
